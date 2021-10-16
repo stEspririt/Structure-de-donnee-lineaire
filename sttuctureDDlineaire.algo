@@ -1,0 +1,38 @@
+ALGORITHM structure_de_donnee_lineaire
+VAR
+    tab : ARRAY_OF INTEGER[M][N]; 
+   elm,i,j : INTEGER; 
+    sum : INTEGER := 0;
+    htab : HASH_TABLE<integer>;
+
+BEGIN
+//Premiére solution
+    FOR i FROM 0 TO M-1 DO
+    FOR j FROM 0 TO N-1 DO
+        IF (tab[i]<>tab[j]) THEN
+            sum := tab[i] + tab[j]
+        END_IF 
+    END_FOR
+END_FOR
+//Deuxiéme solution
+FOR i FROM 0 TO M -1 STEP 1  DO
+    FOR i FROM 0 TO N -1 STEP 1  DO
+    IF (htab.lookup(M[i]) <> htab.lookup(M[i])) THEN
+           count := htab.get(M[i],N[i]);
+           htab.insert(M[i],N[i],count+1);
+           sum := tab[i] + tab[j]
+           sum +=;
+    END_FOR
+END_FOR
+
+//pronléme 2
+FOR i FROM 0 TO M -1 STEP 1  DO
+    FOR i FROM 0 TO N -1 STEP 1  DO
+    IF (htab.lookup(M[i]) <> htab.lookup(M[i])) THEN
+           count := htab.get(M[i],N[i]);
+           htab.insert(M[i],N[i],count+1);
+           sum := tab[i] 
+           sum := sum + N[j];
+    END_FOR
+END_FOR
+END
